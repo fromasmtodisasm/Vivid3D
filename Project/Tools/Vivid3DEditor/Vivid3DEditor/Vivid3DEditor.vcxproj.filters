@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{6e30221e-33c7-4ba3-9f65-b380ebc0f287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{4c0153fa-27c4-457f-9391-0e912c94b89d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Vivid3DEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vivid3DApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorMainMenu.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="MainEditorState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorToolBar.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorMainSplit.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTreeView.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorSecondSplit.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorThirdSplit.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneSplit.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorSceneView.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorContentBrowser.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorGlobal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vivid3DApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorMainMenu.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="MainEditorState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorToolBar.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorMainSplit.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTreeView.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorSecondSplit.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorThirdSplit.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSplit.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorSceneView.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorContentBrowser.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorGlobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

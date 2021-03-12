@@ -1,0 +1,10 @@
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\bin\x64\Debug\AnimViewer.exe.config
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\bin\x64\Debug\AnimViewer.exe
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\bin\x64\Debug\AnimViewer.pdb
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\obj\x64\Debug\AnimViewer.csprojAssemblyReference.cache
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\obj\x64\Debug\AnimViewer.Form1.resources
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\obj\x64\Debug\AnimViewer.Properties.Resources.resources
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\obj\x64\Debug\AnimViewer.csproj.GenerateResource.cache
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\obj\x64\Debug\AnimViewer.csproj.CoreCompileInputs.cache
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\obj\x64\Debug\AnimViewer.exe
+C:\Git\Vivid3DCPP\Project\Tools\AnimViewer\obj\x64\Debug\AnimViewer.pdb

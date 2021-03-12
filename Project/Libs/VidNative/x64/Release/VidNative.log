@@ -1,0 +1,14 @@
+﻿  pch.cpp
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\pch.h(36,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  dllmain.cpp
+  VidNative.cpp
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(195,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(210,25): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(536,69): error C4996: 'AVStream::codec': was declared deprecated
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(534,24): error C4996: 'av_frame_get_best_effort_timestamp': was declared deprecated
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(622,70): error C4996: 'AVStream::codec': was declared deprecated
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(762,5): error C4996: 'av_free_packet': was declared deprecated
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(771,5): error C4996: 'av_free_packet': was declared deprecated
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(915,11): warning C4129: 'm': unrecognized character escape sequence
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(1046,18): warning C4244: '=': conversion from 'double' to 'int64_t', possible loss of data
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\VidNative.cpp(967,4): error C4996: 'av_register_all': was declared deprecated

@@ -1,0 +1,1 @@
+C:\Github\VividEngine2\Project\Libs\VideoSys\VidNative\x64\Debug\VidNative.vcxproj.CopyComplete

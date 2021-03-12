@@ -1,0 +1,145 @@
+﻿  BakeMapWin.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(137,11): warning C4244: 'initializing': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(145,10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,18): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,13): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(198,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(199,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(204,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(208,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapSprite.h(111,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(16,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(19,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(22,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(23,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(325,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(430,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(549,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(550,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(644,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(766,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(767,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(768,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(769,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(707,15): warning C4101: 'l3': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(705,15): warning C4101: 'l1': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(706,15): warning C4101: 'l2': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(708,15): warning C4101: 'l4': unreferenced local variable
+  ContentItem.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(137,11): warning C4244: 'initializing': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(145,10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,18): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,13): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(198,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(199,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(204,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(208,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapSprite.h(111,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(16,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(19,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(22,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(23,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(325,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(430,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(549,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(550,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(644,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(766,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(767,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(768,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(769,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(707,15): warning C4101: 'l3': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(705,15): warning C4101: 'l1': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(706,15): warning C4101: 'l2': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(708,15): warning C4101: 'l4': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Apps\TileSetEditor\TileSetEditor\ContentItem.cpp(30,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  EditorGlobal.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(137,11): warning C4244: 'initializing': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(145,10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,18): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,13): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(198,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(199,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(204,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(208,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapSprite.h(111,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(16,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(19,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(22,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(23,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(325,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(430,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(549,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(550,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(644,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(766,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(767,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(768,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(769,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(707,15): warning C4101: 'l3': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(705,15): warning C4101: 'l1': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(706,15): warning C4101: 'l2': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(708,15): warning C4101: 'l4': unreferenced local variable
+  TileSetApp.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(137,11): warning C4244: 'initializing': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(145,10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,18): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,13): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(198,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(199,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(204,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(208,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapSprite.h(111,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(16,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(19,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(22,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(23,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(325,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(430,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(549,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(550,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(644,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(766,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(767,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(768,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(769,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(707,15): warning C4101: 'l3': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(705,15): warning C4101: 'l1': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(706,15): warning C4101: 'l2': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(708,15): warning C4101: 'l4': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeServer.h(11,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Apps\TileSetEditor\TileSetEditor\TileSetApp.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Git\Vivid3DCPP\Project\Apps\TileSetEditor\TileSetEditor\TileSetApp.cpp(357,12): warning C4101: 'cy': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Apps\TileSetEditor\TileSetEditor\TileSetApp.cpp(357,8): warning C4101: 'cx': unreferenced local variable
+  TileSetEditor.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(137,11): warning C4244: 'initializing': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(145,10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,18): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(152,13): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(198,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(199,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(204,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(208,10): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapSprite.h(111,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(16,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(19,16): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(22,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapDecal.h(23,13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(325,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(430,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(549,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(550,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(644,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(766,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(767,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(768,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(769,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(707,15): warning C4101: 'l3': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(705,15): warning C4101: 'l1': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(706,15): warning C4101: 'l2': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(708,15): warning C4101: 'l4': unreferenced local variable
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeServer.h(11,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  TileSetEditor.vcxproj -> C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\TileSetEditor.exe

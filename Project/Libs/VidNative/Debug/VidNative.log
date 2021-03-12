@@ -1,0 +1,9 @@
+﻿  VidNative.cpp
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(478,69): error C4996: 'AVStream::codec': was declared deprecated
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(476,24): error C4996: 'av_frame_get_best_effort_timestamp': was declared deprecated
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(549,70): error C4996: 'AVStream::codec': was declared deprecated
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(637,5): error C4996: 'av_free_packet': was declared deprecated
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(643,5): error C4996: 'av_free_packet': was declared deprecated
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(760,11): warning C4129: 'm': unrecognized character escape sequence
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(859,18): warning C4244: '=': conversion from 'double' to 'int64_t', possible loss of data
+C:\Git\FutureWar\project\Libs\VideoSys\VidNative\VidNative.cpp(796,4): error C4996: 'av_register_all': was declared deprecated

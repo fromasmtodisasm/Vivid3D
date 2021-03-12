@@ -1,0 +1,10 @@
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\bin\Debug\AnimMaker.exe.config
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\bin\Debug\AnimMaker.exe
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\bin\Debug\AnimMaker.pdb
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\obj\Debug\AnimMaker.csprojAssemblyReference.cache
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\obj\Debug\AnimMaker.Form1.resources
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\obj\Debug\AnimMaker.Properties.Resources.resources
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\obj\Debug\AnimMaker.csproj.GenerateResource.cache
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\obj\Debug\AnimMaker.csproj.CoreCompileInputs.cache
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\obj\Debug\AnimMaker.exe
+C:\Git\Vivid3DCPP\Project\Tools\AnimMaker\AnimMaker\obj\Debug\AnimMaker.pdb

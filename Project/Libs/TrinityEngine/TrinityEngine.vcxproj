@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\OpenAL.Soft.1.19.1\build\openal.soft.props" Condition="Exists('packages\OpenAL.Soft.1.19.1\build\openal.soft.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{FFBFAC12-D059-4A2F-9FA9-BFEED44CAB75}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TrinityEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Git\Vivid3DCPP\deps\assimp\include;C:\Git\Vivid3DCPP\deps\lua\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;C:\Git\Vivid3DCPP\deps\glm-master;C:\Git\Vivid3DCPP\deps\glew-2.1.0\include;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\include;C:\Git\Vivid3DCPP\deps\cm\include\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;chipmunk.lib;Xinput9_1_0.lib;fmodL_vc.lib;OpenCL.lib;zlibstatic.lib;lua54.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Git\Vivid3DCPP\deps\assimp;C:\Git\Vivid3DCPP\deps\lua;C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\packages\zlib-vc140-static-64.1.2.11\lib\native\libs\x64\static\Release;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\lib\x64;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x64;C:\Git\Vivid3DCPP\deps\cm;C:\Git\Vivid3DCPP\deps\glew-2.1.0\lib\Release\x64;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;C:\Git\Vivid3DCPP\deps\cm\include\chipmunk;C:\Git\Vivid3DCPP\deps\glm-master;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\include;C:\Git\Vivid3DCPP\deps\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x64;C:\Git\Vivid3DCPP\deps\cm;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Git\Vivid3DCPP\deps\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;chipmunk.lib;Xinput9_1_0.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AIFSM.h" />
+    <ClInclude Include="AIState.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="AppState.h" />
+    <ClInclude Include="BoolControl.h" />
+    <ClInclude Include="ButtonControl.h" />
+    <ClInclude Include="CLImageProcessor.h" />
+    <ClInclude Include="ControlInput.h" />
+    <ClInclude Include="DataTypes.h" />
+    <ClInclude Include="EngGlobal.h" />
+    <ClInclude Include="FileRequestorControl.h" />
+    <ClInclude Include="FrameBufferControl.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="FXImageDraw.h" />
+    <ClInclude Include="FXLight2D.h" />
+    <ClInclude Include="FXLightMap2D.h" />
+    <ClInclude Include="FXMesh3D.h" />
+    <ClInclude Include="FXPreShadow2D.h" />
+    <ClInclude Include="FXShadow2D.h" />
+    <ClInclude Include="FXSoftParticle2D.h" />
+    <ClInclude Include="grand.h" />
+    <ClInclude Include="HorizontalSliderControl.h" />
+    <ClInclude Include="HorizontalSplitterControl.h" />
+    <ClInclude Include="IDraw.h" />
+    <ClInclude Include="ImageControl.h" />
+    <ClInclude Include="kEffect.h" />
+    <ClInclude Include="kFont.h" />
+    <ClInclude Include="kFrameBuffer.h" />
+    <ClInclude Include="LabelControl.h" />
+    <ClInclude Include="ListControl.h" />
+    <ClInclude Include="LScript.h" />
+    <ClInclude Include="MainMenuControl.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapDecal.h" />
+    <ClInclude Include="MapEditControl.h" />
+    <ClInclude Include="MapLight.h" />
+    <ClInclude Include="MapNode.h" />
+    <ClInclude Include="MapRenderer.h" />
+    <ClInclude Include="MapSprite.h" />
+    <ClInclude Include="MapTile.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Mesh2D.h" />
+    <ClInclude Include="Mesh3D.h" />
+    <ClInclude Include="ModelImport.h" />
+    <ClInclude Include="NodeBase.h" />
+    <ClInclude Include="NodeCam.h" />
+    <ClInclude Include="NodeEntity.h" />
+    <ClInclude Include="NodeLight.h" />
+    <ClInclude Include="NodeServer.h" />
+    <ClInclude Include="NumericControl.h" />
+    <ClInclude Include="ParticleBase.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="SceneGraph.h" />
+    <ClInclude Include="ShadowBaker.h" />
+    <ClInclude Include="SimpleMath.h" />
+    <ClInclude Include="SoundChannel.h" />
+    <ClInclude Include="SoundEngine.h" />
+    <ClInclude Include="SoundSource.h" />
+    <ClInclude Include="SpriteAnim.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="stb_truetype.h" />
+    <ClInclude Include="strings.h" />
+    <ClInclude Include="TextBoxControl.h" />
+    <ClInclude Include="Texture2D.h" />
+    <ClInclude Include="tinydir.h" />
+    <ClInclude Include="TMaths.h" />
+    <ClInclude Include="ToolsControl.h" />
+    <ClInclude Include="TreeItem.h" />
+    <ClInclude Include="TreeViewControl.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UIControl.h" />
+    <ClInclude Include="UIEvent.h" />
+    <ClInclude Include="UIEventClick.h" />
+    <ClInclude Include="UIFont.h" />
+    <ClInclude Include="UITheme.h" />
+    <ClInclude Include="UITheme_Neon.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vec2.h" />
+    <ClInclude Include="VerticalSplitterControl.h" />
+    <ClInclude Include="VerticalSrollerControl.h" />
+    <ClInclude Include="VFile.h" />
+    <ClInclude Include="VideoPlayerControl.h" />
+    <ClInclude Include="VidNative.h" />
+    <ClInclude Include="VirtualFile.h" />
+    <ClInclude Include="VirtualFileSystem.h" />
+    <ClInclude Include="VList.h" />
+    <ClInclude Include="VString.h" />
+    <ClInclude Include="WindowControl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AIFSM.cpp" />
+    <ClCompile Include="AIState.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="AppState.cpp" />
+    <ClCompile Include="BoolControl.cpp" />
+    <ClCompile Include="ButtonControl.cpp" />
+    <ClCompile Include="CLImageProcessor.cpp" />
+    <ClCompile Include="ControlInput.cpp" />
+    <ClCompile Include="EngGlobal.cpp" />
+    <ClCompile Include="FileRequestorControl.cpp" />
+    <ClCompile Include="FrameBufferControl.cpp" />
+    <ClCompile Include="FXImageDraw.cpp" />
+    <ClCompile Include="FXLight2D.cpp" />
+    <ClCompile Include="FXLightMap2D.cpp" />
+    <ClCompile Include="FXMesh3D.cpp" />
+    <ClCompile Include="FXPreShadow2D.cpp" />
+    <ClCompile Include="FXShadow2D.cpp" />
+    <ClCompile Include="FXSoftParticle2D.cpp" />
+    <ClCompile Include="HorizontalSliderControl.cpp" />
+    <ClCompile Include="HorizontalSplitterControl.cpp" />
+    <ClCompile Include="IDraw.cpp" />
+    <ClCompile Include="ImageControl.cpp" />
+    <ClCompile Include="kEffect.cpp" />
+    <ClCompile Include="kFont.cpp" />
+    <ClCompile Include="kFrameBuffer.cpp" />
+    <ClCompile Include="LabelControl.cpp" />
+    <ClCompile Include="ListControl.cpp" />
+    <ClCompile Include="LScript.cpp" />
+    <ClCompile Include="MainMenuControl.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapDecal.cpp" />
+    <ClCompile Include="MapEditControl.cpp" />
+    <ClCompile Include="MapLight.cpp" />
+    <ClCompile Include="MapNode.cpp" />
+    <ClCompile Include="MapRenderer.cpp" />
+    <ClCompile Include="MapSprite.cpp" />
+    <ClCompile Include="MapTile.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Mesh2D.cpp" />
+    <ClCompile Include="Mesh3D.cpp" />
+    <ClCompile Include="ModelImport.cpp" />
+    <ClCompile Include="NodeBase.cpp" />
+    <ClCompile Include="NodeCam.cpp" />
+    <ClCompile Include="NodeEntity.cpp" />
+    <ClCompile Include="NodeLight.cpp" />
+    <ClCompile Include="NodeServer.cpp" />
+    <ClCompile Include="NumericControl.cpp" />
+    <ClCompile Include="ParticleBase.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SceneGraph.cpp" />
+    <ClCompile Include="ShadowBaker.cpp" />
+    <ClCompile Include="SoundChannel.cpp" />
+    <ClCompile Include="SoundEngine.cpp" />
+    <ClCompile Include="SoundSource.cpp" />
+    <ClCompile Include="SpriteAnim.cpp" />
+    <ClCompile Include="strings.cpp" />
+    <ClCompile Include="TextBoxControl.cpp" />
+    <ClCompile Include="Texture2D.cpp" />
+    <ClCompile Include="TMaths.cpp" />
+    <ClCompile Include="ToolsControl.cpp" />
+    <ClCompile Include="TreeItem.cpp" />
+    <ClCompile Include="TreeViewControl.cpp" />
+    <ClCompile Include="TrinityEngine.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UIControl.cpp" />
+    <ClCompile Include="UIEvent.cpp" />
+    <ClCompile Include="UIEventClick.cpp" />
+    <ClCompile Include="UIFont.cpp" />
+    <ClCompile Include="UITheme.cpp" />
+    <ClCompile Include="UITheme_Neon.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="VerticalSplitterControl.cpp" />
+    <ClCompile Include="VerticalSrollerControl.cpp" />
+    <ClCompile Include="VFile.cpp" />
+    <ClCompile Include="VideoPlayerControl.cpp" />
+    <ClCompile Include="VirtualFile.cpp" />
+    <ClCompile Include="VirtualFileSystem.cpp" />
+    <ClCompile Include="VList.cpp" />
+    <ClCompile Include="VString.cpp" />
+    <ClCompile Include="WindowControl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\FFmpeg.Nightly.20200831.1.0\build\native\FFmpeg.Nightly.targets" Condition="Exists('packages\FFmpeg.Nightly.20200831.1.0\build\native\FFmpeg.Nightly.targets')" />
+    <Import Project="packages\glfw.3.3.2\build\native\glfw.targets" Condition="Exists('packages\glfw.3.3.2\build\native\glfw.targets')" />
+    <Import Project="packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets" Condition="Exists('packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\FFmpeg.Nightly.20200831.1.0\build\native\FFmpeg.Nightly.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\FFmpeg.Nightly.20200831.1.0\build\native\FFmpeg.Nightly.targets'))" />
+    <Error Condition="!Exists('packages\OpenAL.Soft.1.19.1\build\openal.soft.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\OpenAL.Soft.1.19.1\build\openal.soft.props'))" />
+    <Error Condition="!Exists('packages\glfw.3.3.2\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glfw.3.3.2\build\native\glfw.targets'))" />
+    <Error Condition="!Exists('packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\zlib-vc140-static-64.1.2.11\build\native\zlib-vc140-static-64.targets'))" />
+  </Target>
+</Project>
