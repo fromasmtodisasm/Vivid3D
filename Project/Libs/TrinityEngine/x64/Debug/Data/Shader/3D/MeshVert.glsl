@@ -66,6 +66,6 @@ void main(){
 	TVP = TBN * viewPos;
 	TFP = TBN * oFragPos;
 
-    gl_Position = mProj * mModel * mView * vec4(vPos,1.0);
+    gl_Position = mProj * mView *mModel* vec4(vPos,1.0);
 
 }

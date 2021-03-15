@@ -8,6 +8,8 @@ NodeBase::NodeBase() {
 	LocalScale = glm::vec3(1, 1, 1);
 	LocalPos = glm::vec3(0, 0, 0);
 	Sub.resize(0);
+	FlatCol = Vect3(1, 1, 1);
+	Type = NodeType::TypeNode;
 
 
 }
@@ -16,6 +18,12 @@ void NodeBase::Add(NodeBase* node) {
 
 	Sub.push_back(node);
 	node->SetRoot(this);
+
+}
+
+void NodeBase::SetRotation(glm::mat4 m) {
+
+	LocalTurn = m;
 
 }
 
@@ -66,14 +74,22 @@ void NodeBase::SetScale(Vect3 sc)
 
 glm::mat4 NodeBase::GetWorld() {
 
+	glm::mat4 prev = glm::mat4(1.0f);
+	if (Root != NULL) {
+		prev = Root->GetWorld();
+	}
+
 	//return glm::mat4(1.0f);
 	glm::mat4 id = glm::mat4(1.0f);
 
 	glm::mat4 tm = glm::translate<float>(id,LocalPos);
 		
-	tm = tm * LocalTurn;
+	glm::mat4 scal = glm::scale(id, LocalScale);
 
-	return tm;
+
+	return prev*(scal*tm*LocalTurn);
+	//return prev * tm * LocalTurn * scal;
+	//return scal * LocalTurn * tm * prev;
 
 
 }
@@ -82,7 +98,8 @@ void NodeBase::Move(float x, float y, float z) {
 
 	glm::mat4 id = glm::mat4(1.0f);
 
-	LocalPos = LocalPos+ glm::vec3(LocalTurn * glm::vec4(glm::vec3(x,y,z), 1.0));
+	LocalPos = LocalPos + glm::vec3(GetWorldTurn() * glm::vec4(glm::vec3(x, y, z), 1.0));
+	//printf("MX:%f MY:%f MZ:%f\n", x, y, z);
 
 //	LocalPos += LocalTurn *= glm::vec3(x, y, z);//  LocalTurn;
 

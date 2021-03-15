@@ -7,6 +7,8 @@ void Mesh3D::BindVBO() {
 	glBindVertexArray(VertexArray);
 	glBindBuffer(GL_ARRAY_BUFFER, VertexBuffer);
 
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndexBuffer);
+
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, false, sizeof(Vertex), 0);
 
@@ -43,6 +45,7 @@ void Mesh3D::ReleaseVBO() {
 
 	glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	
 
 
@@ -50,7 +53,8 @@ void Mesh3D::ReleaseVBO() {
 
 void Mesh3D::DrawVBO() {
 
-	glDrawElements(GL_TRIANGLES, Tris.size()*3, GL_UNSIGNED_INT, Tris.data());
+	glDrawElements(GL_TRIANGLES, Tris.size() * 3, GL_UNSIGNED_INT, (void*)(0));
+	//glDrawElements(GL_TRIANGLES, Tris.size()*3, GL_UNSIGNED_INT, Tris.data());
 
 }
 
@@ -58,6 +62,7 @@ void Mesh3D::CreateVBO() {
 
 	glGenVertexArrays(1, &VertexArray);
 	glGenBuffers(1, &VertexBuffer);
+
 
 	int maxSize = Vertices.size();
 
@@ -102,6 +107,10 @@ void Mesh3D::CreateVBO() {
 	glDisableVertexAttribArray(5);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+	glGenBuffers(1, &IndexBuffer);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndexBuffer);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(Tri) * Tris.size(), Tris.data(), GL_STATIC_DRAW);
 
 
 }

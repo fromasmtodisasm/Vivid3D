@@ -1,17 +1,14 @@
-﻿  Texture2D.cpp
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Application.h(6,17): warning C4099: 'GLFWwindow': type name first seen using 'struct' now seen using 'class'
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\packages\glfw.3.3.2\build\native\include\GLFW\glfw3.h(1157): message : see declaration of 'GLFWwindow'
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Texture2D.cpp(185,10): warning C4101: 'ih': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Texture2D.cpp(185,6): warning C4101: 'iw': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Texture2D.cpp(185,14): warning C4101: 'bpp': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Texture2D.cpp(265,10): warning C4101: 'ih': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Texture2D.cpp(265,6): warning C4101: 'iw': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Texture2D.cpp(265,14): warning C4101: 'bpp': unreferenced local variable
+﻿  NodeLight.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeCam.h(31,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MeshLines.h(82,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\SceneGraph.h(51,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeLight.cpp(25,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 chipmunk.lib(chipmunk.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 Xinput9_1_0.lib(XINPUT9_1_0.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 fmodL_vc.lib(fmodL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 OpenCL.lib(OpenCL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 assimp-vc142-mtd.lib(assimp-vc142-mtd.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+python39.lib(python39.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 ModelImport.obj : warning LNK4006: "public: unsigned int __cdecl aiMaterial::GetTextureCount(enum aiTextureType)const " (?GetTextureCount@aiMaterial@@QEBAIW4aiTextureType@@@Z) already defined in assimp-vc142-mtd.lib(assimp-vc142-mtd.dll); second definition ignored
 ModelImport.obj : warning LNK4006: "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z) already defined in assimp-vc142-mtd.lib(assimp-vc142-mtd.dll); second definition ignored
   TrinityEngine.vcxproj -> C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\TrinityEngine.lib

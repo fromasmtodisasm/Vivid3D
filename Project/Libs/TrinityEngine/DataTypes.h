@@ -41,6 +41,244 @@ struct Vect4 {
 		Z = v.Z;
 		W = v.W;
 	}
+
+	static Vect4 Zero() {
+		return Vect4(0, 0, 0, 0);
+	}
+
+	static Vect4 One() {
+		return Vect4(1, 1, 1, 1);
+	}
+
+	float Length() {
+
+		return (float)sqrt((X * X) + (Y * Y) + (Z * Z) + (W * W));
+
+	}
+
+	float LengthSqaured() {
+
+		return (float)(X * X) + (Y * Y) + (Z * Z) + (W * W);
+
+	}
+
+	void Normalize() {
+
+		float scale = 1.0f / Length();
+		X *=scale;
+		Y *= scale;
+		Z *= scale;
+		W *= scale;
+
+	}
+
+	static Vect4 Add(Vect4 a, Vect4 b) {
+
+		return Vect4(a.X + b.X, a.Y + b.Y, a.Z + b.Z, a.W + b.W);
+
+	}
+
+	static Vect4 Subtract(Vect4 a, Vect4 b) {
+
+		return Vect4(a.X - b.X, a.Y - b.Y, a.Z - b.Z, a.W - b.W);
+
+	}
+
+	static Vect4 Multiply(Vect4 a, float scale) {
+
+		return Vect4(a.X * scale, a.Y * scale, a.Z * scale, a.W * scale);
+
+	}
+
+	static Vect4 Multiply(Vect4 a, Vect4 b) {
+
+		return Vect4(a.X * b.X, a.Y * b.Y, a.Z * b.Z, a.W * b.W);
+
+	}
+
+	static Vect4 Divide(Vect4 a, float scale) {
+
+		return Vect4(a.X / scale, a.Y / scale, a.Z / scale, a.W / scale);
+
+	}
+
+	static Vect4 Divide(Vect4 a, Vect4 scale) {
+
+		return Vect4(a.X / scale.X, a.Y / scale.Y, a.Z / scale.Z, a.W / scale.W);
+
+	}
+
+	static Vect4 ComponentMin(Vect4 a, Vect4 b) {
+
+		Vect4 r;
+		if (a.X < b.X) {
+			r.X = a.X;
+		}
+		else {
+			r.X = b.X;
+		}
+		if (a.Y < b.Y) {
+			r.Y = a.Y;
+		}
+		else {
+			r.Y = b.Y;
+		}
+		if (a.Z < b.Z) {
+			r.Z = a.Z;
+		}
+		else {
+			r.Z = b.Z;
+		}
+		if (a.W < b.W)
+		{
+			r.W = a.W;
+		}
+		else {
+			r.W = b.W;
+		}
+		return r;
+	}
+
+	static Vect4 ComponentMax(Vect4 a, Vect4 b) {
+
+		Vect4 r;
+		if (a.X < b.X) {
+			r.X = b.X;
+		}
+		else {
+			r.X = a.X;
+		}
+		if (a.Y < b.Y) {
+			r.Y = b.Y;
+		}
+		else {
+			r.Y = a.Y;
+		}
+		if (a.Z < b.Z) {
+			r.Z = b.Z;
+		}
+		else {
+			r.Z = a.Z;
+		}
+		if (a.W < b.W)
+		{
+			r.W = b.W;
+		}
+		else {
+			r.W = a.W;
+		}
+		return r;
+	}
+
+	static Vect4 MagnitudeMin(Vect4 l, Vect4 r) {
+
+		if (l.LengthSqaured() < r.LengthSqaured())
+		{
+			return l;
+		}
+		return r;
+
+	}
+
+	static Vect4 Normalize(Vect4 v) {
+
+		v.Normalize();
+		return v;
+
+	}
+
+	static float Dot(Vect4 l, Vect4 r) {
+
+		return (l.X * r.X) + (l.Y * r.Y) + (l.Z * r.Z) + (l.W * r.W);
+
+	}
+
+	static Vect4 Lerp(Vect4 a, Vect4 b, float blend) {
+
+		Vect4 r;
+		r.X = (blend * (b.X - a.X)) + a.X;
+		r.Y = (blend * (b.Y - a.Y)) + a.Y;
+		r.Z = (blend * (b.Z - a.Z)) + a.Z;
+		r.W = (blend * (b.W - a.W)) + a.W;
+		return r;
+	}
+
+
+
+
+	Vect4 operator+(const Vect4& b) {
+
+		Vect4 r;
+		r.X = X + b.X;
+		r.Y = Y + b.Y;
+		r.Z = Z + b.Z;
+		r.W = W + b.W;
+		return r;
+	}
+
+	Vect4 operator-(const Vect4& b) {
+
+		Vect4 r;
+		r.X = X - b.X;
+		r.Y = Y - b.Y;
+		r.Z = Z - b.Z;
+		r.W = W - b.W;
+		return r;
+
+	}
+
+	Vect4 operator/(const Vect4& b) {
+		Vect4 r;
+		r.X = X / b.X;
+		r.Y = Y / b.Y;
+		r.Z = Z / b.Z;
+		r.W = W / b.W;
+		return r;
+
+	}
+
+	Vect4 operator*(const Vect4& b) {
+		Vect4 r;
+		r.X = X * b.X;
+		r.Y = Y * b.Y;
+		r.Z = Z * b.Z;
+		r.W = W * b.W;
+		return r;
+
+	}
+
+	Vect4 operator*(float s) {
+		Vect4 r;
+		r.X = X * s;
+		r.Y = Y * s;
+		r.Z = Z * s;
+		r.W = W * s;
+		return r;
+	}
+
+	Vect4 operator/(float s) {
+		Vect4 r;
+		r.X = X / s;
+		r.Y = Y / s;
+		r.Z = Z / s;
+		r.W = W / s;
+		return r;
+	}
+ 
+
+
+	static Vect4 UnitX() {
+		return Vect4(1, 0, 0, 0);
+	}
+	static Vect4 UnitY() {
+		return Vect4(0, 1, 0, 0);
+	}
+	static Vect4 UnitZ() {
+		return Vect4(0, 0, 1, 0);
+	}
+	static Vect4 UnitW() {
+		return Vect4(0, 0, 0, 1);
+	}
 };
 
 struct Vertex {

@@ -3,6 +3,8 @@
 
 NodeEntity::NodeEntity() {
 
+	Type = NodeType::TypeEntity;
+
 
 }
 
@@ -21,6 +23,20 @@ int NodeEntity::NumMeshes() {
 Mesh3D* NodeEntity::GetMesh(int id) {
 
 	return Meshes[id];
+
+}
+
+void NodeEntity::RenderNoMaterial() {
+
+	for (int i = 0; i < Meshes.size(); i++) {
+
+	//	Meshes[i]->BindMaterial();
+		Meshes[i]->BindVBO();
+		Meshes[i]->DrawVBO();
+		Meshes[i]->ReleaseVBO();
+		//Meshes[i]->ReleaseMaterial();
+
+	}
 
 }
 

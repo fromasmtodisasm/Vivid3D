@@ -66,6 +66,7 @@ private:
 	std::vector<Tri> Tris;
 	GLuint VertexArray;
 	GLuint VertexBuffer;
+	GLuint IndexBuffer;
 	Material* Mat;
 
 

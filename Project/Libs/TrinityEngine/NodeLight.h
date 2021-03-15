@@ -1,5 +1,10 @@
 #pragma once
 #include "NodeBase.h"
+#include "FrameBufferCube.h"
+#include "NodeCam.h"
+
+class SceneGraph;
+
 class NodeLight :
     public NodeBase
 {
@@ -13,10 +18,22 @@ public:
     void SetSpecular(Vect3 spec);
     void SetRange(float range);
     void SetShininess(float shine);
+    static NodeLight* Active;
+    static int ShadowMapRes;
+    void DrawShadowMap(SceneGraph*, NodeCam* cam);
+    void SetCam(int tar, NodeCam* cam);
+    void Test(int face,NodeCam* cam,SceneGraph* graph);
+    FrameBufferCube* GetSB() {
+
+        return ShadowFB;
+    }
 private:
     Vect3 Diffuse;
     Vect3 Specular;
     float Range;
     float Shininess;
+    bool CastShadows = true;
+    FrameBufferCube* ShadowFB;
 };
+
 

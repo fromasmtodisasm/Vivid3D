@@ -402,6 +402,48 @@
     <ClInclude Include="NodeLight.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MeshLines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FXMeshLines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FXMeshFlat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonSys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonScript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonMod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonReturn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FXMeshDepth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureCube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBufferCube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TrinityEngine.cpp">
@@ -645,6 +687,48 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NodeLight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshLines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FXMeshLines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FXMeshFlat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonSys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonFunc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonMod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonReturn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FXMeshDepth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureCube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBufferCube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

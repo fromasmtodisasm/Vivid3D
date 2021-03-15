@@ -1,13 +1,23 @@
 #include "pch.h"
 #include "NodeCam.h"
 #include <glm/ext.hpp>
+#include "TMaths.h"
+NodeCam::NodeCam() {
+
+	minZ = 0.1f;
+	maxZ = 700.0f;
+
+}
 
 void NodeCam::SetViewport(int x, int y, int w, int h) {
 
+	float nv = TMaths::DegToRad(FOV);
+	mProj = glm::perspective<float>(nv, (float)w / (float)h, minZ, maxZ);
+	//mProj = glm::perspectiveFov(FOV, (float)w, (float)h, minZ, maxZ);
 
-	//mProj = glm::perspective<float>(65.0f, (float)w / (float)h, 0.1f, 1000.0f);
-	mProj = glm::perspectiveFov(45.0f, (float)w, (float)h, 0.1f, 1000.0f);
+
 }
+
 
 glm::mat4 NodeCam::GetWorld() {
 

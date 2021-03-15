@@ -5,6 +5,8 @@
 #include <assimp/postprocess.h>
 #include "Material.h"
 #include "VString.h"
+#include "glm/glm.hpp"
+#include "glm/ext.hpp"
 NodeEntity* cur = NULL;
 
 std::vector<Mesh3D*> meshes;
@@ -13,14 +15,38 @@ const char* mpath = "";
 
 const C_STRUCT aiScene* scene = NULL;
 
+inline glm::mat4 aiMatrix4x4ToGlm(const aiMatrix4x4* from)
+{
+	glm::mat4 to;
+
+
+	to[0][0] = (GLfloat)from->a1; to[0][1] = (GLfloat)from->b1;  to[0][2] = (GLfloat)from->c1; to[0][3] = (GLfloat)from->d1;
+	to[1][0] = (GLfloat)from->a2; to[1][1] = (GLfloat)from->b2;  to[1][2] = (GLfloat)from->c2; to[1][3] = (GLfloat)from->d2;
+	to[2][0] = (GLfloat)from->a3; to[2][1] = (GLfloat)from->b3;  to[2][2] = (GLfloat)from->c3; to[2][3] = (GLfloat)from->d3;
+	to[3][0] = (GLfloat)from->a4; to[3][1] = (GLfloat)from->b4;  to[3][2] = (GLfloat)from->c4; to[3][3] = (GLfloat)from->d4;
+
+	return to;
+}
+
 NodeEntity* importNode(const C_STRUCT aiScene* sc, const C_STRUCT aiNode* nd)
 {
 
 	printf("Importing Node: Meshes:%d\n", nd->mNumMeshes);
 
 	C_STRUCT aiMatrix4x4 m = nd->mTransformation;
-		
+	
+	glm::mat4 vm = aiMatrix4x4ToGlm(&m);
+	glm::vec4 pos = vm[3];
+
+	vm[3] = glm::vec4(0, 0, 0, 1);
+
+
+	//vm[3] = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
+
 	NodeEntity* vent = new NodeEntity;
+
+	vent->SetRotation(vm);
+	vent->SetPosition(Vect3(pos.x, pos.y, pos.z));
 
 	VString nn = VString(nd->mName.C_Str());
 	vent->SetName(nn.GetConst());
@@ -292,8 +318,9 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 			nvert.Col = Vect4(col.r, col.g, col.b, col.a);
 
 			vmesh->SetVertex(v, nvert);
-
+			printf("X:%f Y:%f Z:%f \n", vert.x, vert.y, vert.z);
 		}
+
 
 		for (int t = 0; t < mesh->mNumFaces; t++) {
 
@@ -320,7 +347,7 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 	printf("Import complete.\n");
 
 	aiReleaseImport(scene);
-
+	
 
 	return root;
 

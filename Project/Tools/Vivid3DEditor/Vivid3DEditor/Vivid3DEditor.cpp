@@ -6,9 +6,14 @@
 #include "Vivid3DApp.h"
 #include <stdio.h> 
 #include "MainEditorState.h"
+#include "PythonSys.h"
+#include "PythonScript.h"
+#include "NodeBase.h"
 
 int main()
 {
+
+   
     Application::ContentPath = "C:\\Git\\Vivid3DCPP\\Project\\Libs\\TrinityEngine\\x64\\Debug\\Data\\";
 
     const char* test = Application::GetPath("Edit/highlight1.png");

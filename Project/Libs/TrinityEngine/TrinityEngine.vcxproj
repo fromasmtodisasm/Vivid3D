@@ -105,7 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Git\Vivid3DCPP\deps\assimp\include;C:\Git\Vivid3DCPP\deps\lua\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;C:\Git\Vivid3DCPP\deps\glm-master;C:\Git\Vivid3DCPP\deps\glew-2.1.0\include;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\include;C:\Git\Vivid3DCPP\deps\cm\include\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\antro\AppData\Local\Programs\Python\Python39\include;C:\Program Files\Mono\include\mono-2.0;C:\Git\Vivid3DCPP\deps\assimp\include;C:\Git\Vivid3DCPP\deps\lua\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;C:\Git\Vivid3DCPP\deps\glm-master;C:\Git\Vivid3DCPP\deps\glew-2.1.0\include;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\include;C:\Git\Vivid3DCPP\deps\cm\include\chipmunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -115,10 +115,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;chipmunk.lib;Xinput9_1_0.lib;fmodL_vc.lib;OpenCL.lib;zlibstatic.lib;lua54.lib;assimp-vc142-mtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;chipmunk.lib;Xinput9_1_0.lib;fmodL_vc.lib;OpenCL.lib;zlibstatic.lib;lua54.lib;assimp-vc142-mtd.lib;python39.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>C:\Git\Vivid3DCPP\deps\assimp;C:\Git\Vivid3DCPP\deps\lua;C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\packages\zlib-vc140-static-64.1.2.11\lib\native\libs\x64\static\Release;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\lib\x64;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x64;C:\Git\Vivid3DCPP\deps\cm;C:\Git\Vivid3DCPP\deps\glew-2.1.0\lib\Release\x64;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\antro\AppData\Local\Programs\Python\Python39\libs;C:\Git\Vivid3DCPP\deps\assimp;C:\Git\Vivid3DCPP\deps\lua;C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\packages\zlib-vc140-static-64.1.2.11\lib\native\libs\x64\static\Release;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\lib\x64;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x64;C:\Git\Vivid3DCPP\deps\cm;C:\Git\Vivid3DCPP\deps\glew-2.1.0\lib\Release\x64;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -177,11 +177,15 @@
     <ClInclude Include="EngGlobal.h" />
     <ClInclude Include="FileRequestorControl.h" />
     <ClInclude Include="FrameBufferControl.h" />
+    <ClInclude Include="FrameBufferCube.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="FXImageDraw.h" />
     <ClInclude Include="FXLight2D.h" />
     <ClInclude Include="FXLightMap2D.h" />
     <ClInclude Include="FXMesh3D.h" />
+    <ClInclude Include="FXMeshDepth.h" />
+    <ClInclude Include="FXMeshFlat.h" />
+    <ClInclude Include="FXMeshLines.h" />
     <ClInclude Include="FXPreShadow2D.h" />
     <ClInclude Include="FXShadow2D.h" />
     <ClInclude Include="FXSoftParticle2D.h" />
@@ -206,8 +210,10 @@
     <ClInclude Include="MapSprite.h" />
     <ClInclude Include="MapTile.h" />
     <ClInclude Include="Material.h" />
+    <ClInclude Include="Matrix4.h" />
     <ClInclude Include="Mesh2D.h" />
     <ClInclude Include="Mesh3D.h" />
+    <ClInclude Include="MeshLines.h" />
     <ClInclude Include="ModelImport.h" />
     <ClInclude Include="NodeBase.h" />
     <ClInclude Include="NodeCam.h" />
@@ -218,6 +224,13 @@
     <ClInclude Include="ParticleBase.h" />
     <ClInclude Include="ParticleSystem.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PythonClass.h" />
+    <ClInclude Include="PythonFunc.h" />
+    <ClInclude Include="PythonMod.h" />
+    <ClInclude Include="PythonObj.h" />
+    <ClInclude Include="PythonReturn.h" />
+    <ClInclude Include="PythonScript.h" />
+    <ClInclude Include="PythonSys.h" />
     <ClInclude Include="SceneGraph.h" />
     <ClInclude Include="ShadowBaker.h" />
     <ClInclude Include="SimpleMath.h" />
@@ -230,6 +243,7 @@
     <ClInclude Include="strings.h" />
     <ClInclude Include="TextBoxControl.h" />
     <ClInclude Include="Texture2D.h" />
+    <ClInclude Include="TextureCube.h" />
     <ClInclude Include="tinydir.h" />
     <ClInclude Include="TMaths.h" />
     <ClInclude Include="ToolsControl.h" />
@@ -267,10 +281,14 @@
     <ClCompile Include="EngGlobal.cpp" />
     <ClCompile Include="FileRequestorControl.cpp" />
     <ClCompile Include="FrameBufferControl.cpp" />
+    <ClCompile Include="FrameBufferCube.cpp" />
     <ClCompile Include="FXImageDraw.cpp" />
     <ClCompile Include="FXLight2D.cpp" />
     <ClCompile Include="FXLightMap2D.cpp" />
     <ClCompile Include="FXMesh3D.cpp" />
+    <ClCompile Include="FXMeshDepth.cpp" />
+    <ClCompile Include="FXMeshFlat.cpp" />
+    <ClCompile Include="FXMeshLines.cpp" />
     <ClCompile Include="FXPreShadow2D.cpp" />
     <ClCompile Include="FXShadow2D.cpp" />
     <ClCompile Include="FXSoftParticle2D.cpp" />
@@ -294,8 +312,10 @@
     <ClCompile Include="MapSprite.cpp" />
     <ClCompile Include="MapTile.cpp" />
     <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Matrix4.cpp" />
     <ClCompile Include="Mesh2D.cpp" />
     <ClCompile Include="Mesh3D.cpp" />
+    <ClCompile Include="MeshLines.cpp" />
     <ClCompile Include="ModelImport.cpp" />
     <ClCompile Include="NodeBase.cpp" />
     <ClCompile Include="NodeCam.cpp" />
@@ -311,6 +331,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="PythonClass.cpp" />
+    <ClCompile Include="PythonFunc.cpp" />
+    <ClCompile Include="PythonMod.cpp" />
+    <ClCompile Include="PythonObj.cpp" />
+    <ClCompile Include="PythonReturn.cpp" />
+    <ClCompile Include="PythonScript.cpp" />
+    <ClCompile Include="PythonSys.cpp" />
     <ClCompile Include="SceneGraph.cpp" />
     <ClCompile Include="ShadowBaker.cpp" />
     <ClCompile Include="SoundChannel.cpp" />
@@ -320,6 +347,7 @@
     <ClCompile Include="strings.cpp" />
     <ClCompile Include="TextBoxControl.cpp" />
     <ClCompile Include="Texture2D.cpp" />
+    <ClCompile Include="TextureCube.cpp" />
     <ClCompile Include="TMaths.cpp" />
     <ClCompile Include="ToolsControl.cpp" />
     <ClCompile Include="TreeItem.cpp" />

@@ -3,8 +3,13 @@
 
 Material::Material() {
 
-	ColorTex = NULL;
-	NormalTex = NULL;
+	if (White == NULL) {
+
+		White = new Texture2D("edit/white1.png", false, false);
+		NormalBlank = new Texture2D("edit/nm1.png", false, false);
+	}
+	ColorTex = White;
+	NormalTex = NormalBlank;
 	SpecularTex = NULL;
 
 }
@@ -62,3 +67,6 @@ void Material::Release() {
 	}
 
 }
+
+Texture2D* Material::White = NULL;
+Texture2D* Material::NormalBlank = NULL;

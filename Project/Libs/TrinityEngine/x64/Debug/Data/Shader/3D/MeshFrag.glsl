@@ -1,5 +1,5 @@
 #version 330 core
-
+#extension GL_NV_shadow_samplers_cube : enable
 
 in vec3 oUv;
 in vec4 oCol;
@@ -16,10 +16,24 @@ in mat3 TBN;
 
 uniform sampler2D tCol;
 uniform sampler2D tNorm;
+uniform samplerCube tShadow;
 uniform vec3 lPos;
 uniform vec3 lDiff;
 uniform vec3 lSpec;
 uniform float lRange;
+uniform vec3 viewPos;
+uniform float lightDepth;
+uniform vec3 viewVec;
+
+    vec3 sampleOffsetDirections[20] = vec3[]
+(
+   vec3( 1,  1,  1), vec3( 1, -1,  1), vec3(-1, -1,  1), vec3(-1,  1,  1), 
+   vec3( 1,  1, -1), vec3( 1, -1, -1), vec3(-1, -1, -1), vec3(-1,  1, -1),
+   vec3( 1,  1,  0), vec3( 1, -1,  0), vec3(-1, -1,  0), vec3(-1,  1,  0),
+   vec3( 1,  0,  1), vec3(-1,  0,  1), vec3( 1,  0, -1), vec3(-1,  0, -1),
+   vec3( 0,  1,  1), vec3( 0, -1,  1), vec3( 0, -1, -1), vec3( 0,  1, -1)
+);   
+
 
 out vec4 color;
 
@@ -73,12 +87,39 @@ void main(){
 
     vec3 specular = ((lSpec) * spec); 
 
-    //
+    // Shadows
+
+     float cosTheta = abs( dot( normalize(viewVec), pass_normal) );
+    float fresnel = pow(1.0 - cosTheta, 4.0);
+
+
+    float shadow = 0.0;
+    float bias = 0.05f;
+    int samples = 18;
+    float viewDistance = length(viewPos - oFragPos);
+    float diskRadius = 0.003f;
+    vec3 fragToLight = oFragPos - lPos;
+    float currentDepth = length(fragToLight);
+    float ld2 = currentDepth/lRange;
+    if(ld2>1.0) ld2 = 1.0;
+    ld2 = 1.0 - ld2;
+    fragToLight = normalize(fragToLight);
+    for(int i=0;i<samples;i++){
+
+        float closestDepth = textureCube(tShadow,fragToLight + sampleOffsetDirections[i] * diskRadius).r;
+        closestDepth *= lightDepth;
+        if((currentDepth - bias) > closestDepth){
+            shadow += 1.0;
+        }
+
+    }
+    shadow /= float(samples);
+    shadow = 1.0 - shadow;
 
 
     vec4 fc;
 
-    fc.rgb = (diffuse + specular)*df;
+    fc.rgb = ((diffuse + specular)*df)*vec3(shadow,shadow,shadow);
     fc.a = 1.0;
 
     color = fc;

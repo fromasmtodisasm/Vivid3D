@@ -160,7 +160,7 @@ void EditorContentBrowser::DoubleClick(int b)
 			VString str(OverItem->FullPath);
 			VString ext(OverItem->Ext);
 
-			if (ext.IsSame(".blend") || ext.IsSame(".b3d") || ext.IsSame(".gltf"))
+			if (ext.IsSame(".blend") || ext.IsSame(".b3d") || ext.IsSame(".gltf") || ext.IsSame(".fbx") || ext.IsSame(".3ds"))
 			{
 				ModelImport* importer = new ModelImport;
 

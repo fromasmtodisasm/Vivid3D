@@ -12,6 +12,7 @@ public:
 	Mesh3D* GetMesh(int id);
 	int NumMeshes();
 	void Render();
+	void RenderNoMaterial();
 
 
 private:

@@ -21,6 +21,8 @@ private:
 	Texture2D* ColorTex;
 	Texture2D* NormalTex;
 	Texture2D* SpecularTex;
+	static Texture2D* White;
+	static Texture2D* NormalBlank;
 
 };
 
