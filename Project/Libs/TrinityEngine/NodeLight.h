@@ -23,6 +23,8 @@ public:
     void DrawShadowMap(SceneGraph*, NodeCam* cam);
     void SetCam(int tar, NodeCam* cam);
     void Test(int face,NodeCam* cam,SceneGraph* graph);
+    void SetPosition(Vect3 pos);
+    void SetPosition(float x, float y, float z);
     FrameBufferCube* GetSB() {
 
         return ShadowFB;
@@ -34,6 +36,7 @@ private:
     float Shininess;
     bool CastShadows = true;
     FrameBufferCube* ShadowFB;
+    bool Reshadow = true;
 };
 
 

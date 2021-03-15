@@ -15,10 +15,28 @@ NodeLight::NodeLight() {
 
 }
 
+void NodeLight::SetPosition(Vect3 pos) {
+
+	LocalPos = glm::vec3(pos.X,pos.Y,pos.Z);
+	Reshadow = true;
+
+}
+
+void NodeLight::SetPosition(float x, float y, float z) {
+
+	LocalPos = glm::vec3(x, y, z);
+	Reshadow = true;
+
+}
+
 void NodeLight::DrawShadowMap(SceneGraph* graph,NodeCam* cam) {
 
 	Active = this;
 	
+	if (!Reshadow) return;
+	Reshadow = false;
+
+
 	NodeCam* scam = new NodeCam;
 	scam->SetFOV(90);
 	scam->SetMinZ(cam->GetMinZ());

@@ -94,7 +94,7 @@ void main(){
 
 
     float shadow = 0.0;
-    float bias = 0.05f;
+    float bias = 0.03f;
     int samples = 18;
     float viewDistance = length(viewPos - oFragPos);
     float diskRadius = 0.003f;

@@ -213,7 +213,7 @@ Texture2D::Texture2D(const char* path, bool alpha, bool absPath)
 	VString nn(texPath);
 	nn.Add(".tc");
 
-	if (!VFile::Exists(nn.GetConst())) {
+	if (VFile::Exists(nn.GetConst())) {
 	
 
 		this->texPath = nn.GetConst();

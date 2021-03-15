@@ -36,8 +36,9 @@ public:
 	float GetPositionY();
 	float GetPositionZ();
 	void SetRotation(glm::mat4 m);
-	void SetPosition(Vect3 pos);
-	void SetPosition(float x, float y, float z);
+	virtual void SetPosition(Vect3 pos);
+	virtual void SetPosition(float x, float y, float z);
+
 	void LookAt(Vect3 p);
 	void LookAt(float x, float y, float z);
 	void SetScale(Vect3 scale);

@@ -31,7 +31,7 @@ inline glm::mat4 aiMatrix4x4ToGlm(const aiMatrix4x4* from)
 NodeEntity* importNode(const C_STRUCT aiScene* sc, const C_STRUCT aiNode* nd)
 {
 
-	printf("Importing Node: Meshes:%d\n", nd->mNumMeshes);
+	//printf("Importing Node: Meshes:%d\n", nd->mNumMeshes);
 
 	C_STRUCT aiMatrix4x4 m = nd->mTransformation;
 	
@@ -67,7 +67,7 @@ NodeEntity* importNode(const C_STRUCT aiScene* sc, const C_STRUCT aiNode* nd)
 		const C_STRUCT aiMesh* mesh = scene->mMeshes[nd->mMeshes[n]];
 
 		*/
-	printf("Importing Children. Count:%d\n", nd->mNumChildren);
+	//printf("Importing Children. Count:%d\n", nd->mNumChildren);
 	for (int i = 0; i < nd->mNumChildren; i++) {
 		
 		auto nent = importNode(sc, nd->mChildren[i]);
@@ -104,9 +104,9 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 		p1.Add(VString("\\"));
 	}
 
-	printf("P2:");
-	printf(p1.GetConst());
-	printf("|\n");
+	//printf("P2:");
+	//printf(p1.GetConst());
+	//printf("|\n");
 	
 	mpath = p1.GetConst();
 
@@ -139,9 +139,9 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 		{
 
 			mat->GetTexture(aiTextureType_NORMALS, 0, &dp);
-			printf("Norm:");
-			printf(dp.C_Str());
-			printf("\n");
+		//	printf("Norm:");
+		//	printf(dp.C_Str());
+		//	printf("\n");
 
 			if (VFile::Exists(dp.C_Str())) {
 
@@ -186,9 +186,9 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 
 					mp.Add(jf);
 
-					printf("TP:");
-					printf(mp.GetConst());
-					printf("|\n");
+					//printf("TP:");
+					//printf(mp.GetConst());
+				//	printf("|\n");
 					//while(true){}
 
 					if (VFile::Exists(mp.GetConst()))
@@ -207,9 +207,9 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 
 		if (dc > 0) {
 			mat->GetTexture(aiTextureType_DIFFUSE, 0, &dp);
-			printf("Diff:");
-			printf(dp.C_Str());
-			printf("\n");
+			//printf("Diff:");
+			//printf(dp.C_Str());
+			//printf("\n");
 
 			if (VFile::Exists(dp.C_Str())) {
 
@@ -254,9 +254,9 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 
 					mp.Add(jf);
 
-					printf("TP:");
-					printf(mp.GetConst());
-					printf("|\n");
+					//printf("TP:");
+					//printf(mp.GetConst());
+					//printf("|\n");
 					//while(true){}
 
 					if (VFile::Exists(mp.GetConst()))
@@ -273,7 +273,7 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 			}
 
 		}
-		printf("Mat: DC:%d NC:%d\n", dc, nc);
+//		printf("Mat: DC:%d NC:%d\n", dc, nc);
 
 
 	}
@@ -318,7 +318,7 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 			nvert.Col = Vect4(col.r, col.g, col.b, col.a);
 
 			vmesh->SetVertex(v, nvert);
-			printf("X:%f Y:%f Z:%f \n", vert.x, vert.y, vert.z);
+			//printf("X:%f Y:%f Z:%f \n", vert.x, vert.y, vert.z);
 		}
 
 
@@ -341,10 +341,10 @@ NodeEntity* ModelImport::ImportAI(const char* path) {
 
 	}
 
-	printf("Importing scene.\n");
+	//printf("Importing scene.\n");
 	root = importNode(scene, scene->mRootNode);
 
-	printf("Import complete.\n");
+	//printf("Import complete.\n");
 
 	aiReleaseImport(scene);
 	
