@@ -45,7 +45,7 @@ void main(){
 
     /// ---- Shadow
 
-    float steps = 256;
+    float steps = 64;
 
     float xd,yd;
 
@@ -84,7 +84,8 @@ void main(){
         if(tv<0.1)
         {
 //            fs=1.0f;
-
+            discard;
+            return;
             fs=1;
             break;
         }

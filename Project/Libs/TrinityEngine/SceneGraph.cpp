@@ -45,7 +45,7 @@ void SceneGraph::RenderNodeFlat(NodeEntity* node) {
 	FXMeshFl->mModel = node->GetWorld();
 	FXMeshFl->mView = Cam->GetWorld();
 	FXMeshFl->fCol = node->GetFlatCol();
-
+	glDisable(GL_BLEND);
 	FXMeshFl->bind();
 	node->Render();
 	FXMeshFl->unbind();

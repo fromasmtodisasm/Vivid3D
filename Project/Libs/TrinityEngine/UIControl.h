@@ -162,6 +162,9 @@ public:
 	const char* GetToolTip() {
 		return ToolTip;
 	}
+	void SetHighlight(bool h) {
+		Highlight = h;
+	}
 protected:
 	void (*actionPtr)();
 	std::function<void()> act = NULL;
@@ -186,6 +189,7 @@ protected:
 	UIControl* Right=NULL;
 	UIControl* Down = NULL;
 	const char* ToolTip = NULL;
+	bool Highlight = false;
 };
 
 

@@ -1,0 +1,5 @@
+﻿  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 2308 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Vivid3DEditor.vcxproj -> C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Release\Vivid3DEditor.exe

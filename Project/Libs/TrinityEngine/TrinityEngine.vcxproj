@@ -149,7 +149,7 @@
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;C:\Git\Vivid3DCPP\deps\cm\include\chipmunk;C:\Git\Vivid3DCPP\deps\glm-master;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\include;C:\Git\Vivid3DCPP\deps\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Git\Vivid3DCPP\deps\assimp\include;C:\Users\antro\AppData\Local\Programs\Python\Python39\include;C:\Git\Vivid3DCPP\deps\lua\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\inc;C:\Git\Vivid3DCPP\deps\cm\include\chipmunk;C:\Git\Vivid3DCPP\deps\glm-master;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\include;C:\Git\Vivid3DCPP\deps\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -160,8 +160,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x64;C:\Git\Vivid3DCPP\deps\cm;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Git\Vivid3DCPP\deps\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;chipmunk.lib;Xinput9_1_0.lib;fmodL_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\antro\AppData\Local\Programs\Python\Python39\libs;C:\Git\Vivid3DCPP\deps\assimp;C:\Git\Vivid3DCPP\deps\lua;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\lib\x64;C:\Program Files %28x86%29\FMOD SoundSystem\FMOD Studio API Windows\api\core\lib\x64;C:\Git\Vivid3DCPP\deps\cm;C:\Git\Vivid3DCPP\deps\glfw-3.3.2.bin.WIN64\lib-vc2019;C:\Git\Vivid3DCPP\deps\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;chipmunk.lib;Xinput9_1_0.lib;fmodL_vc.lib;OpenCL.lib;lua54.lib;assimp-vc142-mtd.lib;python39.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>

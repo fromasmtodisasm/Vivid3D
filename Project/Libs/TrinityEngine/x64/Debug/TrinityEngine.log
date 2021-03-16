@@ -1,13 +1,5 @@
-﻿  NodeLight.cpp
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeCam.h(31,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MeshLines.h(82,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\SceneGraph.h(51,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeLight.cpp(43,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  SceneGraph.cpp
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeCam.h(31,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MeshLines.h(82,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\SceneGraph.h(51,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
+﻿  NodeBase.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\NodeBase.cpp(39,19): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 chipmunk.lib(chipmunk.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 Xinput9_1_0.lib(XINPUT9_1_0.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 fmodL_vc.lib(fmodL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored

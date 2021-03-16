@@ -25,6 +25,9 @@ public:
     void Test(int face,NodeCam* cam,SceneGraph* graph);
     void SetPosition(Vect3 pos);
     void SetPosition(float x, float y, float z);
+    void RegenShadows() {
+        Reshadow = true;
+    }
     FrameBufferCube* GetSB() {
 
         return ShadowFB;

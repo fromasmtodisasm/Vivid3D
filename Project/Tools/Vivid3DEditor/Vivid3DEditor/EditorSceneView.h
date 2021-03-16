@@ -27,6 +27,12 @@ public:
 	//void KeyPressed(int key, bool shift);
 	void KeyDown(int key);
 	void KeyUp(int key);
+	void SetMode(EditMode mode) {
+		EdMode = mode;
+	}
+	EditMode GetMode() {
+		return EdMode;
+	}
 
 private:
 	SceneGraph* ViewGraph = NULL;
@@ -34,7 +40,7 @@ private:
 	float CamPitch, CamYaw;
 	bool Rotating;
 	float mX, mY, mZ;
-	NodeLight* l1;
+	NodeLight* l1, * l2;
 	MeshLines* EditGrid;
 	MeshLines* EditSubGrid;
 	NodeEntity* gTranslate;
@@ -48,6 +54,8 @@ private:
 	int mx, my;
 	EditMode EdMode;
 	bool Moving = false;
+	bool Turning = false;
+	bool Scaling = false;
 	bool MoveX, MoveY, MoveZ;
 };
 

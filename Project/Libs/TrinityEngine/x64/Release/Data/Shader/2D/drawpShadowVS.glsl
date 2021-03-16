@@ -6,6 +6,7 @@ layout(location = 1) in vec2 vUV;
 layout(location = 2) in vec4 vCol;
 
 uniform mat4 proj;
+uniform mat4 view;
 
 // Output data ; will be interpolated for each fragment.
 out vec2 UV;
@@ -15,7 +16,7 @@ void main(){
 
 	UV = vUV;
 	col = vCol;
-	gl_Position = proj * vec4(vP,1);
+	gl_Position = proj * view * vec4(vP,1);
 	
 }
 

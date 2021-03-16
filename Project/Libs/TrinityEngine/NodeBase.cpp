@@ -87,7 +87,7 @@ glm::mat4 NodeBase::GetWorld() {
 	glm::mat4 scal = glm::scale(id, LocalScale);
 
 
-	return prev*(scal*tm*LocalTurn);
+	return prev*(tm*LocalTurn);
 	//return prev * tm * LocalTurn * scal;
 	//return scal * LocalTurn * tm * prev;
 
@@ -188,10 +188,10 @@ void NodeBase::Turn(float p, float y, float r) {
 
 	glm::mat4 id = glm::mat4(1.0f);
 
-	glm::mat4 rot = glm::rotate(id, y, glm::vec3(0, 1, 0));
+	glm::mat4 rot = glm::rotate(id, y, glm::vec3(0, 0, 1));
 	rot = glm::rotate(rot, p, glm::vec3(1, 0, 0));
-	//rot = glm::rotate(rot, r, glm::vec3(0, 0, 1));
+	rot = glm::rotate(rot, r, glm::vec3(0, 1, 0));
 
-	LocalTurn = LocalTurn * rot;
+	LocalTurn = rot * LocalTurn;
 
 }

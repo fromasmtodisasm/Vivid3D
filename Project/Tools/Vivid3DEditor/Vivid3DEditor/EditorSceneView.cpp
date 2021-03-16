@@ -29,16 +29,17 @@ EditorSceneView::EditorSceneView() {
 	l1->SetRange(1000);
 
 
-	l1->SetPosition(0, -10, 30);
+	l1->SetPosition(0, -25, 30);
 	ViewGraph->AddLight(l1);
 
 
 
-	NodeLight* l2 = new NodeLight;
-	l2->SetRange(600);
+	 l2 = new NodeLight;
+	l2->SetRange(800);
 	l2->SetDiffuse(Vect3(0, 2, 2));
-	l2->SetPosition(0, -10, -85);
-	//ViewGraph->AddLight(l2);
+	l2->SetPosition(0, 12, 20);
+	ViewGraph->AddLight(l2);
+	//l1 = l2;
 
 	//EditCam->LookAt(0, 0, 0);
 
@@ -115,7 +116,7 @@ void EditorSceneView::MouseDown(int b) {
 		Rotating = true;
 	}
 	if (b == 0) {
-
+		l2->RegenShadows();
 		auto cp = EditCam->GetPosition();
 		//cp.Z = -cp.Z;
 
@@ -135,16 +136,25 @@ void EditorSceneView::MouseDown(int b) {
 				printf("GIzmo hit!\n");
 				if (gh.HitNode == gTY)
 				{
-					Moving = true;
+					//Moving = true;
+
 					MoveY = true;
 				}
 				if (gh.HitNode == gTX) {
-					Moving = true;
+					//Moving = true;
 					MoveX = true;
 				}
 				if (gh.HitNode == gTZ) {
-					Moving = true;
+					//Moving = true;
 					MoveZ = true;
+				}
+				if (EdMode == EditMode::Translate) {
+					Moving = true;
+					Turning = false;
+				}
+				else if (EdMode == EditMode::Rotate) {
+					Turning = true;
+					Moving = false;
 				}
 				return;
 			}
@@ -165,10 +175,12 @@ void EditorSceneView::MouseDown(int b) {
 
 			printf("Hit!\n");
 			Vect3 hp = inf.HitNode->GetPosition();
-
-			printf("Pos: X:%f Y:%f Z:%f\n", hp.X, hp.Y, hp.Z);
-			gTranslate->SetPosition(inf.HitNode->GetPosition());
 			ActiveNode = (NodeEntity*)inf.HitNode;
+			printf("Pos: X:%f Y:%f Z:%f\n", hp.X, hp.Y, hp.Z);
+			glm::mat4 am = ActiveNode->GetWorld();
+			glm::vec4 ap = am[3];
+			gTranslate->SetPosition(ap.x, ap.y, ap.z);
+		
 
 		}
 		else {
@@ -244,19 +256,38 @@ void EditorSceneView::MouseMove(int x,int y,int dx,int dy) {
 
 		if (MoveX) {
 
-			ActiveNode->Move(dx, 0, 0);
+			ActiveNode->Move((float)(dx) * 0.1f , 0, 0);
 			
 
 		}
 		if (MoveY) {
-			ActiveNode->Move(0, dy, 0);
+			ActiveNode->Move(0, (float)(dy) * 0.1f , 0);
 		}
 		if (MoveZ) {
-			ActiveNode->Move(0, 0, dx);
+			ActiveNode->Move(0, 0,(float)(dx)*0.1f);
 		}
-		gTranslate->SetPosition(ActiveNode->GetPosition());
+		glm::mat4 am = ActiveNode->GetWorld();
+		glm::vec4 ap = am[3];
+		gTranslate->SetPosition(ap.x, ap.y, ap.z);
 		//gTranslate->SetRotation(ActiveNode->GetWorldRotation());
 		return;
+	}
+	else if (Turning) {
+
+
+		if (MoveX) {
+
+			ActiveNode->Turn((float)(dx) * 0.1f, 0, 0);
+
+
+		}
+		if (MoveY) {
+			ActiveNode->Turn(0, (float)(dy) * 0.1f, 0);
+		}
+		if (MoveZ) {
+			ActiveNode->Turn(0, 0, (float)(dx) * 0.1f);
+		}
+
 	}
 
 	if (Rotating) {
@@ -318,6 +349,8 @@ void EditorSceneView::RenderBuffer(kFrameBuffer* b)
 		glClear(GL_DEPTH_BUFFER_BIT);
 		ViewGraph->RenderNodeFlat(gTranslate);
 	}
+
+	
 
 	//Draw/->End
 

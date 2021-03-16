@@ -37,6 +37,15 @@ void main(){
 
     float texAlpha = texture(tR,UV).a;
 
+    //vec4 ff;
+
+    //ff.rgb = texCol;
+    //ff.a = 1.0;
+
+    //color = ff;
+    //return;
+
+
     if(texAlpha<0.4)
     {
         discard;
@@ -71,9 +80,9 @@ void main(){
 
     vec3 texNorm = texture(tN,UV).rgb;
 
-    texNorm.xy = -2.0+texNorm.xy*2.0;
+    texNorm.xy = -1.0+texNorm.xy*2.0;
 
-    vec3 N = vec3(texNorm.x,texNorm.y,1.0+(lightPos.z-1.0));
+    vec3 N = vec3(texNorm.x,texNorm.y,1.0);
 
     float dp = dot(L,N);
 
@@ -81,6 +90,12 @@ void main(){
 
     float xd = (lPos.x*sW)-(pixPos.x*sW);
     float yd = (lPos.y*sH)-(pixPos.y*sH);
+
+  
+
+    dp = dot(L,N);
+    
+
     float mag = sqrt(xd*xd+yd*yd);
     mag = mag / lightRange;
 
@@ -92,11 +107,12 @@ void main(){
    
     vec3 pc = vec3(dp,dp,dp);
 
-    pc.r = pc.r * mag;
-    pc.g = pc.g * mag;
-    pc.b = pc.b * mag;
+    pc.r = mag;
+    pc.g = mag;
+    pc.b = mag;
 
     /// ---- Shadow
+
 
     vec2 nv = pixPos.xy;
 
@@ -133,6 +149,7 @@ void main(){
 
 
     pc = pc  * fs;
+
 
     vec4 fCol;
     

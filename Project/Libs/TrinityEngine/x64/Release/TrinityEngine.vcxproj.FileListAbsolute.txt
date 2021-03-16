@@ -1,3 +1,13 @@
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\TrinityEngine.vcxproj.CopyComplete
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\TrinityEngine.lib
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\avcodec-58.dll
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\avdevice-58.dll
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\avfilter-7.dll
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\avformat-58.dll
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\avutil-56.dll
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\postproc-55.dll
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\swresample-3.dll
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Debug\swscale-5.dll
 C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Release\TrinityEngine.vcxproj.CopyComplete
 C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Release\TrinityEngine.lib
 C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Release\avcodec-58.dll

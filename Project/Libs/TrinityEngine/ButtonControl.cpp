@@ -36,6 +36,13 @@ void ButtonControl::Render() {
 		}
 
 		UI::Theme->DrawImg(GetX(), GetY(), GetW(), GetH(), Back, r,g,b,a);
+		if (Highlight)
+		{
+			UI::Theme->DrawFrame(GetX(), GetY(), GetW(), 3, 0, 2, 2, 1);
+			UI::Theme->DrawFrame(GetX(), GetY(), 3, GetH(), 0, 2, 2, 1);
+			UI::Theme->DrawFrame(GetX(), GetY() + GetH() - 3, GetW(), 3, 0, 2, 2, 1);
+			UI::Theme->DrawFrame(GetX() + GetW() - 3, GetY(), 3, GetH(), 0, 2, 2, 1);
+		}
 		UI::Theme->DrawImg(GetX() + 5, GetY() + 2, GetW() - 10, GetH() - 4, Icon, r,g,b,a);
 	}
 	else {

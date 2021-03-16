@@ -1,31 +1,13 @@
-﻿  ShadowBaker.cpp
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(134,11): warning C4244: 'initializing': conversion from 'cpFloat' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(142,10): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(149,18): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapNode.h(149,13): warning C4244: 'argument': conversion from 'cpFloat' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Application.h(6,17): warning C4099: 'GLFWwindow': type name first seen using 'struct' now seen using 'class'
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\packages\glfw.3.3.2\build\native\include\GLFW\glfw3.h(1157): message : see declaration of 'GLFWwindow'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\packages\glfw.3.3.2\build\native\include\GLFW\glfw3.h(123): message : see previous definition of 'APIENTRY'
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\MapSprite.h(109,1): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(246,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(326,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(445,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(446,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(595,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(596,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(597,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(598,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(536,15): warning C4101: 'l3': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(534,15): warning C4101: 'l1': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(535,15): warning C4101: 'l2': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\Map.h(537,15): warning C4101: 'l4': unreferenced local variable
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\ShadowBaker.cpp(40,11): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\ShadowBaker.cpp(41,11): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\ShadowBaker.cpp(97,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\ShadowBaker.cpp(98,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\ShadowBaker.cpp(126,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+﻿  VirtualFileSystem.cpp
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\VirtualFileSystem.cpp(25,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\VirtualFileSystem.cpp(25,9): message : consider using '%zd' in the format string
+C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\VirtualFileSystem.cpp(122,27): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 chipmunk.lib(chipmunk.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 Xinput9_1_0.lib(XINPUT9_1_0.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 fmodL_vc.lib(fmodL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+OpenCL.lib(OpenCL.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+assimp-vc142-mtd.lib(assimp-vc142-mtd.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+python39.lib(python39.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+ModelImport.obj : warning LNK4006: "public: unsigned int __cdecl aiMaterial::GetTextureCount(enum aiTextureType)const " (?GetTextureCount@aiMaterial@@QEBAIW4aiTextureType@@@Z) already defined in assimp-vc142-mtd.lib(assimp-vc142-mtd.dll); second definition ignored
+ModelImport.obj : warning LNK4006: "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z) already defined in assimp-vc142-mtd.lib(assimp-vc142-mtd.dll); second definition ignored
   TrinityEngine.vcxproj -> C:\Git\Vivid3DCPP\Project\Libs\TrinityEngine\x64\Release\TrinityEngine.lib

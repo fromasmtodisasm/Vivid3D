@@ -1,5 +1,6 @@
 #include "EditorToolBar.h"
 #include "ButtonControl.h"
+#include "EditorGlobal.h"
 EditorToolBar::EditorToolBar() {
 
 	Texture2D* iNewProj = new Texture2D("edit/iNewProj.png", true, false);
@@ -13,14 +14,60 @@ EditorToolBar::EditorToolBar() {
 	Texture2D* iStop = new Texture2D("edit/iStop2.png", true, false);
 	Texture2D* iPause = new Texture2D("edit/iPause.png", true, false);
 
-	ButtonControl* newScene = new ButtonControl();
-	ButtonControl* loadScene = new ButtonControl();
-	ButtonControl* saveScene = new ButtonControl();
+	 newScene = new ButtonControl();
+	 loadScene = new ButtonControl();
+	 saveScene = new ButtonControl();
 	
-	ButtonControl* select = new ButtonControl();
-	ButtonControl* translate = new ButtonControl();
-	ButtonControl* rotate = new ButtonControl();
-	ButtonControl* scale = new ButtonControl();
+	 select = new ButtonControl();
+	 translate = new ButtonControl();
+	 rotate = new ButtonControl();
+		scale = new ButtonControl();
+
+		auto actSelect = [&] {
+
+			EditorGlobal::SceneView->SetMode(EditMode::Select);
+			select->SetHighlight(true);
+			translate->SetHighlight(false);
+			rotate->SetHighlight(false);
+			scale->SetHighlight(false);
+
+
+		};
+
+	auto actTranslate = [&] {
+
+		EditorGlobal::SceneView->SetMode(EditMode::Translate);
+		translate->SetHighlight(true);
+		rotate->SetHighlight(false);
+		scale->SetHighlight(false);
+		select->SetHighlight(false);
+
+	};
+
+	auto actRotate = [&] {
+
+		EditorGlobal::SceneView->SetMode(EditMode::Rotate);
+		translate->SetHighlight(false);
+		rotate->SetHighlight(true);
+		select->SetHighlight(false);
+		scale->SetHighlight(false);
+	};
+
+	auto actScale = [&] {
+
+		EditorGlobal::SceneView->SetMode(EditMode::Scale);
+		translate->SetHighlight(false);
+		rotate->SetHighlight(false);
+		scale->SetHighlight(true);
+		select->SetHighlight(false);
+	};
+
+	select->SetAction(actSelect);
+	translate->SetAction(actTranslate);
+	rotate->SetAction(actRotate);
+	scale->SetAction(actScale);
+
+	translate->SetHighlight(true);
 
 	ButtonControl* play = new ButtonControl();
 	ButtonControl* pause = new ButtonControl();

@@ -93,7 +93,7 @@ void VirtualFileSystem::LoadAndCompress() {
 
 		unsigned char* dest = (unsigned char *)malloc(destLen);
 
-		compress(dest,(uLongf*) &destLen,(const Bytef*) buf,(uLong)size);
+		//compress(dest,(uLongf*) &destLen,(const Bytef*) buf,(uLong)size);
 
 		printf("Original Size:%d Compressed Size:%d\n", (int)size, (int)destLen);
 
