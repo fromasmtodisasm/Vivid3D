@@ -33,8 +33,8 @@ void NodeLight::DrawShadowMap(SceneGraph* graph,NodeCam* cam) {
 
 	Active = this;
 	
-	if (!Reshadow) return;
-	Reshadow = false;
+//	if (!Reshadow) return;
+//	Reshadow = false;
 
 
 	NodeCam* scam = new NodeCam;

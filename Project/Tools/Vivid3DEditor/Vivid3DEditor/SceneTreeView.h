@@ -9,6 +9,8 @@ public:
     void SetGraph(SceneGraph* graph);
     void Rebuild();
     void AddNodes(TreeItem* node, NodeBase* n);
+    void SelectNode(NodeBase* node);
+    void SelectIf(NodeBase* node, TreeItem* item);
 private:
     TreeItem* RootNode;
     SceneGraph* Graph;

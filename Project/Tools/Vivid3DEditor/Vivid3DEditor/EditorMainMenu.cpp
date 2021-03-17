@@ -1,6 +1,7 @@
 #include "EditorMainMenu.h"
 #include "Application.h"
 #include "Texture2D.h"
+#include "EditorGlobal.h"
 
 void EditorMainMenu::SetupProjectMenu() {
 
@@ -52,10 +53,31 @@ void EditorMainMenu::SetupEditMenu() {
 	EditPaste= Edit->AddItem("Paste",iPaste);
 	Edit->AddSeperator();
 	EditDelete = Edit->AddItem("Delete",iDelete);
+	Edit->AddSeperator();
+
+	EditMoveHere = Edit->AddItem("Move Node Here");
+
+	auto actMoveHere = [&] {
+
+		//EditorGLobal::
+		EditorGlobal::SceneView->MoveNodeToCam();
+
+	};
+
+	EditMoveHere->SetAction(actMoveHere);
+
+	EditMoveInFront = Edit->AddItem("Move Node In Front");
+
+
+	auto actMoveInFront = [&] {
+
+		EditorGlobal::SceneView->MoveNodeInFront();
+
+	};
 
 
 
-
+	EditMoveInFront->SetAction(actMoveInFront);
 
 }
 

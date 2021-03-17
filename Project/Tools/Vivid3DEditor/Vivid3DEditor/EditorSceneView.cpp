@@ -90,7 +90,11 @@ EditorSceneView::EditorSceneView() {
 	
 	auto imp = new ModelImport;
 
-	gTranslate = imp->ImportAI("c:\\content\\gizmo\\translate.fbx");
+	gizmoTrans = imp->ImportAI("c:\\content\\gizmo\\translate.fbx");
+	gizmoRot = gizmoTrans;
+	gizmoScale = imp->ImportAI("c:\\content\\gizmo\\scaleGizmo.fbx");
+
+	gTranslate = gizmoTrans;
 
 	//gTranslate->Rotate(0, 90, 0);
 
@@ -105,7 +109,7 @@ EditorSceneView::EditorSceneView() {
 	gTY = (NodeEntity*)tY;
 	gTZ = (NodeEntity*)tX;
 
-	gTranslate->SetScale(Vect3(0.02f, 0.02f, 0.02f));
+	//gTranslate->SetScale(Vect3(0.02f, 0.02f, 0.02f));
 
 
 }
@@ -129,6 +133,7 @@ void EditorSceneView::MouseDown(int b) {
 		MoveX = false;
 		MoveY = false;
 		MoveZ = false;
+		MoveAll = false;
 		RayCastInfo gh = ViewGraph->CamPick(mx, my, GetW(), GetH(), gTranslate);
 		if (gh.Hit) {
 			if (ActiveNode != NULL) {
@@ -148,6 +153,10 @@ void EditorSceneView::MouseDown(int b) {
 					//Moving = true;
 					MoveZ = true;
 				}
+				if (gh.HitNode == gMid)
+				{
+					MoveAll = true;
+				}
 				if (EdMode == EditMode::Translate) {
 					Moving = true;
 					Turning = false;
@@ -155,6 +164,11 @@ void EditorSceneView::MouseDown(int b) {
 				else if (EdMode == EditMode::Rotate) {
 					Turning = true;
 					Moving = false;
+				}
+				else if (EdMode == EditMode::Scale) {
+					Turning = false;
+					Moving = false;
+					Scaling = true;
 				}
 				return;
 			}
@@ -180,6 +194,7 @@ void EditorSceneView::MouseDown(int b) {
 			glm::mat4 am = ActiveNode->GetWorld();
 			glm::vec4 ap = am[3];
 			gTranslate->SetPosition(ap.x, ap.y, ap.z);
+			EditorGlobal::SceneTree->SelectNode(ActiveNode);
 		
 
 		}
@@ -204,6 +219,8 @@ void EditorSceneView::MouseUp(int b) {
 
 	}
 	Moving = false;
+	Turning = false;
+	Scaling = false;
 }
 
 void EditorSceneView::KeyDown(int key) {
@@ -226,7 +243,9 @@ void EditorSceneView::KeyDown(int key) {
 	if (key == GLFW_KEY_D) {
 		mX = 1;
 	}
-
+	if (key == GLFW_KEY_LEFT_SHIFT) {
+		ShiftIn = true;
+	}
 }
 
 void EditorSceneView::KeyUp(int key) {
@@ -248,46 +267,71 @@ void EditorSceneView::KeyUp(int key) {
 	if (key == GLFW_KEY_D) {
 		mX = 0;
 	}
+	if (key == GLFW_KEY_LEFT_SHIFT) {
+		ShiftIn = false;
+	}
 }
 
 void EditorSceneView::MouseMove(int x,int y,int dx,int dy) {
 
-	if (Moving) {
+	if (ActiveNode != NULL) {
+		if (Moving) {
 
-		if (MoveX) {
+			if (MoveX) {
 
-			ActiveNode->Move((float)(dx) * 0.1f , 0, 0);
-			
+				ActiveNode->Move((float)(dx) * 0.1f, 0, 0);
+
+
+			}
+			if (MoveY) {
+				ActiveNode->Move(0, (float)(dy) * 0.1f, 0);
+			}
+			if (MoveZ) {
+				ActiveNode->Move(0, 0, (float)(dx) * 0.1f);
+			}
+			glm::mat4 am = ActiveNode->GetWorld();
+			glm::vec4 ap = am[3];
+			gTranslate->SetPosition(ap.x, ap.y, ap.z);
+			//gTranslate->SetRotation(ActiveNode->GetWorldRotation());
+			return;
+		}
+		else if (Turning) {
+
+
+			if (MoveX) {
+
+				ActiveNode->Turn((float)(dx) * 0.1f, 0, 0);
+
+
+			}
+			if (MoveY) {
+				ActiveNode->Turn(0, (float)(dy) * 0.1f, 0);
+			}
+			if (MoveZ) {
+				ActiveNode->Turn(0, 0, (float)(dx) * 0.1f);
+			}
 
 		}
-		if (MoveY) {
-			ActiveNode->Move(0, (float)(dy) * 0.1f , 0);
+		else if (Scaling) {
+
+			Vect3 cc = ActiveNode->GetScale();
+			if (MoveX) {
+				cc.X = cc.X + (dx) * 0.1f;
+			}
+			if (MoveY) {
+				cc.Y = cc.Y + (dy) * 0.1f;
+			}
+			if (MoveZ) {
+				cc.Z = cc.Z + (dx) * 0.1f;
+			}
+			if (MoveAll) {
+				cc.X = cc.X + (dx) * 0.1f;
+				cc.Y = cc.Y + (dx) * 0.1f;
+				cc.Z = cc.Z + (dx) * 0.1f;
+			}
+			ActiveNode->SetScale(cc);
+
 		}
-		if (MoveZ) {
-			ActiveNode->Move(0, 0,(float)(dx)*0.1f);
-		}
-		glm::mat4 am = ActiveNode->GetWorld();
-		glm::vec4 ap = am[3];
-		gTranslate->SetPosition(ap.x, ap.y, ap.z);
-		//gTranslate->SetRotation(ActiveNode->GetWorldRotation());
-		return;
-	}
-	else if (Turning) {
-
-
-		if (MoveX) {
-
-			ActiveNode->Turn((float)(dx) * 0.1f, 0, 0);
-
-
-		}
-		if (MoveY) {
-			ActiveNode->Turn(0, (float)(dy) * 0.1f, 0);
-		}
-		if (MoveZ) {
-			ActiveNode->Turn(0, 0, (float)(dx) * 0.1f);
-		}
-
 	}
 
 	if (Rotating) {
@@ -313,6 +357,17 @@ void EditorSceneView::AfterSet() {
 
 }
 
+void EditorSceneView::SelectNode(NodeBase* node) {
+
+	ActiveNode = (NodeEntity*)node;
+
+	//printf("Pos: X:%f Y:%f Z:%f\n", hp.X, hp.Y, hp.Z);
+	glm::mat4 am = ActiveNode->GetWorld();
+	glm::vec4 ap = am[3];
+	gTranslate->SetPosition(ap.x, ap.y, ap.z);
+
+}
+
 void EditorSceneView::RenderPreBuffer() {
 
 	for (int i = 0; i < ViewGraph->NumLights(); i++) {
@@ -324,12 +379,33 @@ void EditorSceneView::RenderPreBuffer() {
 
 }
 
+void EditorSceneView::MoveNodeToCam() {
+
+	if (ActiveNode == NULL) return;
+
+	ActiveNode->SetPosition(EditCam->GetPosition());
+	ActiveNode->SetRotation(EditCam->GetRotation());
+}
+
+void EditorSceneView::MoveNodeInFront() {
+
+	if (ActiveNode == NULL) return;
+	ActiveNode->SetPosition(EditCam->GetPosition());
+	ActiveNode->SetRotation(EditCam->GetRotation());
+	ActiveNode->Move(0, 0, -25);
+
+}
+
 void EditorSceneView::RenderBuffer(kFrameBuffer* b)
 {
 
 
-	EditCam->Move(mX*0.1f, mY*0.1f, mZ*0.1f);
-
+	if (ShiftIn) {
+		EditCam->Move(mX * 0.25f, mY * 0.25f, mZ * 0.25f);
+	}
+	else {
+		EditCam->Move(mX * 0.1f, mY * 0.1f, mZ * 0.1f);
+	}
 	
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 

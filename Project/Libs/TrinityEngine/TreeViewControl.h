@@ -21,8 +21,15 @@ public:
     void AfterSet();
     void SetScroller();
     int GetTreeH(TreeItem* i,int y);
+    void SetItemSelected(std::function<void(TreeItem*)> act)
+    {
+        ItemSelected = act;
+    }
+    void SetActiveItem(TreeItem* item) {
+        Active = item;
+    }
 private:
-
+    std::function<void(TreeItem* data)> ItemSelected = NULL;
     TreeItem* Root;
     int TreeY = 5;
     Texture2D* Bg;

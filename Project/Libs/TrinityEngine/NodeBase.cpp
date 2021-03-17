@@ -87,7 +87,9 @@ glm::mat4 NodeBase::GetWorld() {
 	glm::mat4 scal = glm::scale(id, LocalScale);
 
 
-	return prev*(tm*LocalTurn);
+
+	//Scale, then rotate, then position, then apply previous world matrix.
+	return prev*(tm*LocalTurn*scal);
 	//return prev * tm * LocalTurn * scal;
 	//return scal * LocalTurn * tm * prev;
 

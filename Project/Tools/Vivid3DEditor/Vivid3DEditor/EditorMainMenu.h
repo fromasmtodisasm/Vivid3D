@@ -36,6 +36,9 @@ private:
     MenuItem* EditCut;
     MenuItem* EditPaste;
     MenuItem* EditDelete;
+    MenuItem* EditMoveHere;
+    MenuItem* EditMoveInFront;
+    MenuItem* EditMoveCameraToNode;
 
     
     //Add

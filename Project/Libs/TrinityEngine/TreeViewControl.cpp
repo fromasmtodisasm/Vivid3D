@@ -90,6 +90,11 @@ int TreeViewControl::RenderNode(TreeItem* node, int x, int y) {
 		return y;
 	}
 
+	if (x > GetW()-20)
+	{
+		return y;
+	}
+
 	bool dr = false;
 	if (y < GetY()) {
 		dr = true;
@@ -117,7 +122,31 @@ int TreeViewControl::RenderNode(TreeItem* node, int x, int y) {
 		}
 	}
 	if (!dr) {
-		UI::RenderText(x + 15, y, node->GetText(), 1, 1, 1, 1);
+
+		VString nt(node->GetText());
+
+		int rl = nt.Len();
+
+		for (int i = 0; i < nt.Len(); i++) {
+
+			VString ts = nt.SubString(0, i + 1);
+
+			int aw = UI::TextWidth(ts.GetConst());
+			int cw = GetW();
+			if (x+aw > GetW() - 20)
+			{
+				rl = i;
+				break;
+			}
+
+		}
+
+		VString rs(node->GetText());
+
+		VString fs = rs.SubString(0, rl);
+
+
+		UI::RenderText(x + 15, y, fs.GetConst() , 1, 1, 1, 1);
 	}
 
 	if (!dr) {
@@ -230,6 +259,9 @@ void TreeViewControl::MouseDown(int b) {
 		bd = true;
 
 		Active = Over;
+		if (ItemSelected != NULL) {
+			ItemSelected(Active);
+		}
 
 		if (Active != NULL) {
 
